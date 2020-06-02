@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite"  parallel="none">
+  <test name="Login with correct creds">
+  <parameter name="testName" value="Login with valid username/password" />
+  <parameter name="browser" value="chrome" />
+    <classes>
+      <class name="tests.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Login with wrong user">
+  <parameter name="userName" value="wrongUser" />
+  <parameter name="password" value="SuperSecretPassword!" />
+  <parameter name="errorMessage" value="Your username is invalid!" />
+  <parameter name="testName" value="Login with wrong user" />
+  <parameter name="browser" value="chrome" />
+    <classes>
+      <class name="tests.LoginTest_wrongCreds"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Login with wrong password">
+  <parameter name="userName" value="tomsmith" />
+  <parameter name="password" value="wrongPassword" />
+  <parameter name="errorMessage" value="Your password is invalid!" />
+   <parameter name="testName" value="Login with wrong password" />
+   <parameter name="browser" value="chrome" />
+    <classes>
+      <class name="tests.LoginTest_wrongCreds"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Login with correct creds(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="testName" value="Login with valid username/password"/>
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="beforeTest"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- Login with correct creds(failed) -->
+</suite> <!-- Failed suite [Suite] -->
